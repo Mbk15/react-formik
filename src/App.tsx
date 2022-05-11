@@ -1,4 +1,3 @@
-import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
@@ -12,8 +11,8 @@ function App() {
         .test(
           "is-full-name",
           "Please enter both your first and last name",
-          function (value) {
-            const nameArr = value.split(" ");
+          function (val) {
+            const nameArr = val.split(" ");
             return nameArr.length >= 2;
           }
         ),
@@ -131,6 +130,8 @@ function App() {
           </button>
         </div>
       </form>
+      <br />
+      <hr />
     </div>
   );
 }

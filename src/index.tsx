@@ -5,10 +5,12 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import ButtonUi from "./components/ButtonUi";
 import CardUI from "./components/CardUI";
+import Booklist from "./components/Booklist";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
+    <Booklist />
     <ButtonUi message="Alhamdulillah" />
     <CardUI />
   </React.StrictMode>,
