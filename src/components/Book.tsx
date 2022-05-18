@@ -10,7 +10,9 @@ const Book = ({ book }: myProps) => {
   return (
     <article className="my-5 br-7 p-5">
       <img className="h-auto max-width-100" src={img} alt="" />
-      <h1 className="mt-5 ">{title}</h1>
+      <h1 className="mt-5 " onClick={() => console.log(title)}>
+        {title}
+      </h1>
       <h4 className="text-blue-500">By : {author}</h4>
     </article>
   );

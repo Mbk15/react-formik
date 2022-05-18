@@ -5,7 +5,15 @@ const Booklist = () => {
   return (
     <section className="flex justify-center align-center flex-wrap">
       {books.map((book) => {
-        return <Book key={book.id} book={book}></Book>;
+        return (
+          <Book
+            key={book.id}
+            book={book}
+            img={""}
+            title={""}
+            author={""}
+          ></Book>
+        );
       })}
     </section>
   );

@@ -6,13 +6,16 @@ import reportWebVitals from "./reportWebVitals";
 import ButtonUi from "./components/ButtonUi";
 import CardUI from "./components/CardUI";
 import Booklist from "./components/Booklist";
+import BasicExample from "./AdvancedReact/useState/BasicExample";
+import ArrayExample from "./AdvancedReact/useState/ArrayExample";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
     <Booklist />
-    <ButtonUi message="Alhamdulillah" />
-    <CardUI />
+    <BasicExample />
+    <ArrayExample />
+    {/* <ButtonUi message="Alhamdulillah" /> */}
+    {/* <CardUI /> */}
   </React.StrictMode>,
   document.getElementById("root")
 );
