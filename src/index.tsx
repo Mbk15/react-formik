@@ -1,10 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import ButtonUi from "./components/ButtonUi";
-import CardUI from "./components/CardUI";
+import ObjectExample from "./AdvancedReact/useState/ObjectExample";
 import Booklist from "./components/Booklist";
 import BasicExample from "./AdvancedReact/useState/BasicExample";
 import ArrayExample from "./AdvancedReact/useState/ArrayExample";
@@ -14,6 +12,7 @@ ReactDOM.render(
     <Booklist />
     <BasicExample />
     <ArrayExample />
+    <ObjectExample />
     {/* <ButtonUi message="Alhamdulillah" /> */}
     {/* <CardUI /> */}
   </React.StrictMode>,
