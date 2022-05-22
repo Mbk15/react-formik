@@ -6,13 +6,14 @@ import ObjectExample from "./AdvancedReact/useState/ObjectExample";
 import Booklist from "./components/Booklist";
 import BasicExample from "./AdvancedReact/useState/BasicExample";
 import ArrayExample from "./AdvancedReact/useState/ArrayExample";
-
+import UseStateCounter from "./AdvancedReact/useState/UseStateCounter";
 ReactDOM.render(
   <React.StrictMode>
     <Booklist />
     <BasicExample />
     <ArrayExample />
     <ObjectExample />
+    <UseStateCounter />
     {/* <ButtonUi message="Alhamdulillah" /> */}
     {/* <CardUI /> */}
   </React.StrictMode>,
