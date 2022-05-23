@@ -15,6 +15,7 @@ const UseEffectCleanup = () => {
   return (
     <div>
       <h2 className="text-center">UseEffect Cleanup</h2>
+      <h3 className="text-center"> WINDOW</h3>
       <h1 className="text-center">{size} PX</h1>
     </div>
   );
