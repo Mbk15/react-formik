@@ -8,6 +8,7 @@ import BasicExample from "./AdvancedReact/useState/BasicExample";
 import ArrayExample from "./AdvancedReact/useState/ArrayExample";
 import UseStateCounter from "./AdvancedReact/useState/UseStateCounter";
 import UseffectBasic from "./AdvancedReact/useEffect/UseffectBasic";
+import UseStateCleanup from "./AdvancedReact/useEffect/UseEffectCleanup";
 ReactDOM.render(
   <React.StrictMode>
     <Booklist />
@@ -16,6 +17,7 @@ ReactDOM.render(
     <ObjectExample />
     <UseStateCounter />
     <UseffectBasic />
+    <UseStateCleanup />
     {/* <ButtonUi message="Alhamdulillah" /> */}
     {/* <CardUI /> */}
   </React.StrictMode>,
