@@ -19,7 +19,9 @@ const GithubCard = ({
       <div className="w-max flex align-center justify-center flex-column bg-purple-400 br-4 my-4 py-5 px-5">
         <div>
           <img src={ImageUrl} alt={alt} />
-          <h4 key={key}>{username}</h4>
+          <h4 key={key}>
+            {username.charAt(0).toUpperCase() + username.slice(1)}
+          </h4>
           <p> By : {followers}</p>
         </div>
       </div>

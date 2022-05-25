@@ -11,6 +11,3 @@ body {
 @tailwind components;
 @tailwind utilities;
 
-.house {
-  margin: 0 auto;
-}
