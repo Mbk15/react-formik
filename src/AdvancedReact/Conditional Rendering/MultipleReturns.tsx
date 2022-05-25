@@ -14,11 +14,13 @@ const MultipleReturns = () => {
         } else {
           setIsLoading(false);
           setIsError(true);
+          throw new Error(res.statusText);
         }
       })
       .then((data) => {
         const { login } = data;
         setUser(login);
+        setIsLoading(false);
         console.log(data);
       })
       .catch((err) => {
