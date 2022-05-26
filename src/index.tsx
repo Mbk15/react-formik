@@ -12,6 +12,7 @@ import UseStateCleanup from "./AdvancedReact/useEffect/UseEffectCleanup";
 import UseEffectFetchData from "./AdvancedReact/useEffect/UseEffectFetchData";
 import MultipleReturns from "./AdvancedReact/Conditional Rendering/MultipleReturns";
 import ShortCircuit from "./AdvancedReact/Conditional Rendering/ShortCircuit";
+import ShowHide from "./AdvancedReact/Conditional Rendering/ShowHide";
 ReactDOM.render(
   <React.StrictMode>
     <Booklist />
@@ -24,6 +25,7 @@ ReactDOM.render(
     <UseEffectFetchData />
     <MultipleReturns />
     <ShortCircuit />
+    <ShowHide />
     {/* <ButtonUi message="Alhamdulillah" /> */}
     {/* <CardUI /> */}
   </React.StrictMode>,
