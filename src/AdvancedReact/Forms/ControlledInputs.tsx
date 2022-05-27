@@ -1,12 +1,21 @@
 import React, { useState } from "react";
 
 const ControlledInputs = () => {
-  const [firstName, setFirstname] = useState("Hello world");
-  const [email, setEmail] = useState("Mbk@gmail.com");
+  const [firstName, setFirstname] = useState("");
+  const [email, setEmail] = useState("");
+  const [people, setPeople] = useState([]);
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("Form Submitted");
-    console.log(firstName);
+    if (firstName && email) {
+      const person = { id: new Date().getTime().toString(), firstName, email };
+      setPeople((people) => {
+        return [...people, person];
+      });
+      setFirstname("");
+      setEmail("");
+    } else {
+      console.log("Empty Values");
+    }
   };
   return (
     <>
@@ -45,6 +54,18 @@ const ControlledInputs = () => {
           </div>
         </form>
       </article>
+      {people.map((person) => {
+        const { id, firstName, email } = person;
+        return (
+          <div
+            className="w-1/2 mx-auto  flex align-center justify-center flex-column bg-orange-400 br-4 my-4 py-5 px-5"
+            key={id}
+          >
+            <h4>{firstName}</h4>
+            <p>{email}</p>
+          </div>
+        );
+      })}
     </>
   );
 };
