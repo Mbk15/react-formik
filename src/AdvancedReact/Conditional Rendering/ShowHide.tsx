@@ -4,9 +4,9 @@ const ShowHide = () => {
   const [isShow, setIsShow] = useState(false);
 
   return (
-    <div className=" mx-auto my-5">
+    <div className=" mx-auto w-1/2 bg-red-500 my-5">
       <button
-        className="bg-green-500 px-5 py-2 rounded text-center flex justify-center text-white ml-8"
+        className="bg-green-500 my-4 px-5 py-2 rounded text-center flex justify-center text-white mx-auto"
         onClick={() => setIsShow(!isShow)}
       >
         Show/Hide
