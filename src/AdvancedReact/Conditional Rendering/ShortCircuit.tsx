@@ -5,7 +5,7 @@ const ShortCircuit = () => {
   const [isError, setIsError] = useState(false);
 
   return (
-    <>
+    <div className="w-1/2 mx-auto flex bg-blue-400 br-4 my-4 py-5 px-5">
       <h1>Hello world</h1>
       {text || <h1>: Mbk don land !</h1>}
       <button
@@ -22,7 +22,7 @@ const ShortCircuit = () => {
           <p>There is no error </p>
         </div>
       )}
-    </>
+    </div>
   );
 };
 

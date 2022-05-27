@@ -13,6 +13,7 @@ import UseEffectFetchData from "./AdvancedReact/useEffect/UseEffectFetchData";
 import MultipleReturns from "./AdvancedReact/Conditional Rendering/MultipleReturns";
 import ShortCircuit from "./AdvancedReact/Conditional Rendering/ShortCircuit";
 import ShowHide from "./AdvancedReact/Conditional Rendering/ShowHide";
+import ControlledInputs from "./AdvancedReact/Forms/ControlledInputs";
 ReactDOM.render(
   <React.StrictMode>
     <Booklist />
@@ -26,6 +27,7 @@ ReactDOM.render(
     <MultipleReturns />
     <ShortCircuit />
     <ShowHide />
+    <ControlledInputs />
     {/* <ButtonUi message="Alhamdulillah" /> */}
     {/* <CardUI /> */}
   </React.StrictMode>,
