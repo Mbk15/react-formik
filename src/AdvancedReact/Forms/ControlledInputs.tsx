@@ -1,21 +1,46 @@
 import React, { useState } from "react";
 
 const ControlledInputs = () => {
-  const [firstName, setFirstname] = useState("");
-  const [email, setEmail] = useState("");
+  /***Using Multiple state management */
+
+  // const [firstName, setFirstname] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [age, setAge] = useState("");
+  const [person, setPerson] = useState({ firstName: "", email: "", age: "" });
   const [people, setPeople] = useState([]);
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    if (firstName && email) {
-      const person = { id: new Date().getTime().toString(), firstName, email };
-      setPeople((people) => {
-        return [...people, person];
-      });
-      setFirstname("");
-      setEmail("");
-    } else {
-      console.log("Empty Values");
+    const { firstName, age, email } = person;
+    if (firstName && age && email) {
+      const newPerson = { ...person, id: new Date().getTime().toString() };
+
+      setPeople([...people, newPerson]);
+
+      setPerson({ firstName: "", email: "", age: "" });
     }
+    /***Conditions to check array update before updating values  */
+
+    // if (firstName && email && age) {
+    //   const person = {
+    //     id: new Date().getTime().toString(),
+    //     firstName,
+    //     email,
+    //     age,
+    //   };
+    //   setPeople((people) => {
+    //     return [...people, person];
+    //   });
+    //   setFirstname("");
+    //   setEmail("");
+    // } else {
+    //   console.log("Empty Values");
+    // }
+  };
+  const handleChange = (e: any) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    console.log(name, value);
+    setPerson({ ...person, [name]: value });
   };
   return (
     <>
@@ -30,8 +55,8 @@ const ControlledInputs = () => {
               type="text"
               id="firstName"
               name="firstName"
-              value={firstName}
-              onChange={(e) => setFirstname(e.target.value)}
+              value={person.firstName}
+              onChange={handleChange}
             />
           </div>
           <div className="my-5 bg-gray-400 mx-4">
@@ -40,8 +65,18 @@ const ControlledInputs = () => {
               type="text"
               id="email"
               name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={person.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="my-5 bg-gray-400 mx-4">
+            <label htmlFor="age"> Age :</label>
+            <input
+              type="text"
+              id="age"
+              name="age"
+              value={person.age}
+              onChange={handleChange}
             />
           </div>
           <div className="w-1/2 mx-auto my-4">
@@ -55,14 +90,21 @@ const ControlledInputs = () => {
         </form>
       </article>
       {people.map((person) => {
-        const { id, firstName, email } = person;
+        const { id, firstName, email, age } = person;
         return (
           <div
-            className="w-1/2 mx-auto  flex align-center justify-center flex-column bg-orange-400 br-4 my-4 py-5 px-5"
+            className="w-1/2 mx-auto  flex align-center justify-space-even flex-column bg-orange-400 br-4 my-4 py-5 px-5"
             key={id}
           >
-            <h4>{firstName}</h4>
-            <p>{email}</p>
+            <div>
+              <h4>{firstName} </h4>
+            </div>
+            <div>
+              <p>{age}</p>
+            </div>
+            <div>
+              <p>{email}</p>
+            </div>
           </div>
         );
       })}
