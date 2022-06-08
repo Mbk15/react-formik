@@ -14,12 +14,18 @@ const UseRefBasics = () => {
   };
   console.log(refContainer);
 
+  useEffect(() => {
+    console.log(refContainer.current);
+
+    refContainer.current.focus();
+  });
+
   return (
     <>
       <form onSubmit={handleSubmit}>
         <div className="flex w-1/2 mx-auto my-5 bg-pink-500 border-green-500">
           <input type="text" placeholder="Enter Name" ref={refContainer} />
-          <input type="submit" />
+          <button type="submit">Submit</button>
         </div>
       </form>
     </>
