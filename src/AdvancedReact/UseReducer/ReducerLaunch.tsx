@@ -1,18 +1,36 @@
 import React, { useState, useReducer } from "react";
 import Modal from "./Modal";
+
+const reducer = (state, action) => {
+  if (action.type === "ADD_ITEM") {
+    const newItems = [...state.people, action.payload];
+    console.log(state.people);
+    return {
+      ...state,
+      people: newItems,
+      isShowModal: true,
+      modalContent: "Item Added",
+    };
+  }
+  if (action.type === "NO_VALUE") {
+    return {
+      ...state,
+      isShowModal: true,
+      modalContent: "Enter a Value !",
+    };
+  }
+  throw new Error("No Matching Details");
+};
+
 type reducerType = {
   people: [];
   isShowModal: boolean;
   modalContent: string;
 };
 const InitialState: reducerType = {
-  people: [],
+  people: ["Mubby", "Kareem"],
   isShowModal: false,
   modalContent: "Hello Mbk",
-};
-const reducer = (state, action) => {
-  console.log(state, action);
-  return state;
 };
 const ReducerLaunch = () => {
   const [name, setName] = useState("");
@@ -23,7 +41,10 @@ const ReducerLaunch = () => {
     e.preventDefault();
     console.log(name);
     if (name) {
-      dispatch({ type: "TESTING" });
+      const newItem = { id: new Date().getTime().toString(), name };
+      dispatch({ type: "ADD_ITEM", payload: newItem });
+    } else {
+      dispatch({ type: "NO_VALUE" });
     }
   };
   return (
@@ -41,6 +62,13 @@ const ReducerLaunch = () => {
           <button type="submit">Submit</button>
         </div>
       </form>
+      {/* {state?.people?.map((person) => {
+        return (
+          <ul key={state?.people?.id}>
+            <li>{person}</li>
+          </ul>
+        );
+      })} */}
     </>
   );
 };
