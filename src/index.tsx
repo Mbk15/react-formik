@@ -16,6 +16,7 @@ import ShowHide from "./AdvancedReact/Conditional Rendering/ShowHide";
 import ReducerLaunch from "./AdvancedReact/UseReducer/ReducerLaunch";
 import ControlledInputs from "./AdvancedReact/Forms/ControlledInputs";
 import UseRefBasics from "./AdvancedReact/UseRef/UseRefBasics";
+import PropsDrilling from "./AdvancedReact/PropsDrilling/PropsDrilling";
 ReactDOM.render(
   <React.StrictMode>
     <Booklist />
@@ -36,6 +37,7 @@ ReactDOM.render(
     <UseRefBasics />
 
     <ReducerLaunch />
+    <PropsDrilling />
 
     {/* <ButtonUi message="Alhamdulillah" /> */}
     {/* <CardUI /> */}
