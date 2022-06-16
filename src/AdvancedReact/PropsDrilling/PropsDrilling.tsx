@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Data } from "./data";
-
+// more components
+// fix - context api, redux(for more complex cases)
 const PropsDrilling = () => {
   const [people, setPeople] = useState(Data);
   const removeItem = (id) => {
@@ -31,13 +32,13 @@ const SinglePerson = ({ removeItem, name, id }) => {
   return (
     <div
       key={id}
-      className="bg-blue-500 w-1/2 mx-auto my-3 text-center flex  space-between"
+      className="bg-blue-500 w-1/2  mx-auto my-3 text-center flex  justify-between"
     >
       <div>
         <h3>{name}</h3>
       </div>
       <div>
-        <button className=" ml-20 text-red-600 " onClick={() => removeItem(id)}>
+        <button className=" text-red-600 " onClick={() => removeItem(id)}>
           remove item
         </button>
       </div>

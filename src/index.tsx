@@ -7,16 +7,12 @@ import Booklist from "./components/Booklist";
 import BasicExample from "./AdvancedReact/useState/BasicExample";
 import ArrayExample from "./AdvancedReact/useState/ArrayExample";
 import UseStateCounter from "./AdvancedReact/useState/UseStateCounter";
-import UseffectBasic from "./AdvancedReact/useEffect/UseffectBasic";
-import UseStateCleanup from "./AdvancedReact/useEffect/UseEffectCleanup";
-import UseEffectFetchData from "./AdvancedReact/useEffect/UseEffectFetchData";
-import MultipleReturns from "./AdvancedReact/Conditional Rendering/MultipleReturns";
-import ShortCircuit from "./AdvancedReact/Conditional Rendering/ShortCircuit";
 import ShowHide from "./AdvancedReact/Conditional Rendering/ShowHide";
 import ReducerLaunch from "./AdvancedReact/UseReducer/ReducerLaunch";
 import ControlledInputs from "./AdvancedReact/Forms/ControlledInputs";
 import UseRefBasics from "./AdvancedReact/UseRef/UseRefBasics";
 import PropsDrilling from "./AdvancedReact/PropsDrilling/PropsDrilling";
+import ContextApi from "./AdvancedReact/UseContext/ContextApi";
 ReactDOM.render(
   <React.StrictMode>
     <Booklist />
@@ -38,6 +34,7 @@ ReactDOM.render(
 
     <ReducerLaunch />
     <PropsDrilling />
+    <ContextApi />
 
     {/* <ButtonUi message="Alhamdulillah" /> */}
     {/* <CardUI /> */}
