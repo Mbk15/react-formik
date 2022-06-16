@@ -1,26 +1,6 @@
 import React, { useState, useReducer } from "react";
 import Modal from "./Modal";
-
-const reducer = (state, action) => {
-  if (action.type === "ADD_ITEM") {
-    const newItems = [...state.people, action.payload];
-    console.log(state.people);
-    return {
-      ...state,
-      people: newItems,
-      isShowModal: true,
-      modalContent: "Item Added",
-    };
-  }
-  if (action.type === "NO_VALUE") {
-    return {
-      ...state,
-      isShowModal: true,
-      modalContent: "Enter a Value !",
-    };
-  }
-  throw new Error("No Matching Details");
-};
+import { reducer } from "./reducer";
 
 type reducerType = {
   people: [];
@@ -28,7 +8,7 @@ type reducerType = {
   modalContent: string;
 };
 const InitialState: reducerType = {
-  people: ["Mubby", "Kareem"],
+  people: [],
   isShowModal: false,
   modalContent: "Hello Mbk",
 };
@@ -42,15 +22,21 @@ const ReducerLaunch = () => {
     console.log(name);
     if (name) {
       const newItem = { id: new Date().getTime().toString(), name };
+
       dispatch({ type: "ADD_ITEM", payload: newItem });
+      setName("");
     } else {
       dispatch({ type: "NO_VALUE" });
     }
   };
+  const closeModal = () => {
+    dispatch({ type: "CLOSE_MODAL" });
+  };
   return (
     <>
-      {state.isShowModal && <Modal modalContent={state.modalContent} />}
-
+      {state.isShowModal && (
+        <Modal closeModal={closeModal} modalContent={state.modalContent} />
+      )}
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col w-1/2 mx-auto my-5 bg-red-500 border-green-500">
           <input
@@ -62,13 +48,9 @@ const ReducerLaunch = () => {
           <button type="submit">Submit</button>
         </div>
       </form>
-      {/* {state?.people?.map((person) => {
-        return (
-          <ul key={state?.people?.id}>
-            <li>{person}</li>
-          </ul>
-        );
-      })} */}
+      {state.people.map((person: any) => {
+        console.log(person);
+      })}
     </>
   );
 };
