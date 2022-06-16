@@ -1,20 +1,7 @@
-import React, { useState, useEffect } from "react";
+import { useFetch } from "./UseFetch";
 const url = "https://api.github.com/users";
 const CustomHook = () => {
-  const [loading, setLoading] = useState(true);
-  const [products, setProducts] = useState([]);
-
-  const getProducts = async () => {
-    const response = await fetch(url);
-    const products = await response.json();
-    setProducts(products);
-    setLoading(false);
-    console.log(products);
-  };
-  useEffect(() => {
-    getProducts();
-  }, []);
-
+  const { loading, products } = useFetch(url);
   const Loader = () => {
     return (
       <div className="flex justify-center ">
