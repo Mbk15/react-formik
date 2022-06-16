@@ -13,6 +13,7 @@ import ControlledInputs from "./AdvancedReact/Forms/ControlledInputs";
 import UseRefBasics from "./AdvancedReact/UseRef/UseRefBasics";
 import PropsDrilling from "./AdvancedReact/PropsDrilling/PropsDrilling";
 import ContextApi from "./AdvancedReact/UseContext/ContextApi";
+import CustomHook from "./AdvancedReact/CustomHook/CustomHook";
 ReactDOM.render(
   <React.StrictMode>
     <Booklist />
@@ -35,6 +36,7 @@ ReactDOM.render(
     <ReducerLaunch />
     <PropsDrilling />
     <ContextApi />
+    <CustomHook />
 
     {/* <ButtonUi message="Alhamdulillah" /> */}
     {/* <CardUI /> */}
