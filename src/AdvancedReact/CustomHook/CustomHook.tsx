@@ -1,7 +1,7 @@
 import { useFetch } from "./UseFetch";
 const url = "https://api.github.com/users";
 const CustomHook = () => {
-  const { loading, products } = useFetch(url);
+  const { loading } = useFetch(url);
   const Loader = () => {
     return (
       <div className="flex justify-center ">
