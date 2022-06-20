@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
 import ObjectExample from "./AdvancedReact/useState/ObjectExample";
 import Booklist from "./components/Booklist";
 import BasicExample from "./AdvancedReact/useState/BasicExample";
@@ -15,13 +16,15 @@ import PropsDrilling from "./AdvancedReact/PropsDrilling/PropsDrilling";
 import ContextApi from "./AdvancedReact/UseContext/ContextApi";
 import CustomHook from "./AdvancedReact/CustomHook/CustomHook";
 import ProductLaunch from "./AdvancedReact/Prop-Types/ProductLaunch";
+import ReactRouterSetup from "./AdvancedReact/React-Router/ReactRouterSetup";
+import App from "./App";
 ReactDOM.render(
   <React.StrictMode>
-    <Booklist />
+    {/* <Booklist />
     <BasicExample />
     <ArrayExample />
     <ObjectExample />
-    <UseStateCounter />
+    <UseStateCounter /> */}
     {/* <UseffectBasic />
     <UseStateCleanup />
     <UseEffectFetchData /> */}
@@ -29,7 +32,7 @@ ReactDOM.render(
     <ShortCircuit />
 
     <ShowHide /> */}
-
+    {/* 
     <ShowHide />
     <ControlledInputs />
     <UseRefBasics />
@@ -38,7 +41,12 @@ ReactDOM.render(
     <PropsDrilling />
     <ContextApi />
     <CustomHook />
-    <ProductLaunch />
+    <ProductLaunch /> */}
+
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+
     {/* <ButtonUi message="Alhamdulillah" /> */}
     {/* <CardUI /> */}
   </React.StrictMode>,
