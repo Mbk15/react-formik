@@ -14,6 +14,7 @@ import UseRefBasics from "./AdvancedReact/UseRef/UseRefBasics";
 import PropsDrilling from "./AdvancedReact/PropsDrilling/PropsDrilling";
 import ContextApi from "./AdvancedReact/UseContext/ContextApi";
 import CustomHook from "./AdvancedReact/CustomHook/CustomHook";
+import ProductLaunch from "./AdvancedReact/Prop-Types/ProductLaunch";
 ReactDOM.render(
   <React.StrictMode>
     <Booklist />
@@ -37,7 +38,7 @@ ReactDOM.render(
     <PropsDrilling />
     <ContextApi />
     <CustomHook />
-
+    <ProductLaunch />
     {/* <ButtonUi message="Alhamdulillah" /> */}
     {/* <CardUI /> */}
   </React.StrictMode>,

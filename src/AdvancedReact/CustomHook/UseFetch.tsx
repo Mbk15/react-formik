@@ -7,8 +7,7 @@ export const useFetch = (url: string) => {
   const getProducts = async () => {
     const response = await fetch(url);
     const products = await response.json();
-
-    console.log(products);
+    setProducts(products);
   };
   useEffect(() => {
     getProducts();
