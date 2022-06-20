@@ -1,9 +1,10 @@
 import React from "react";
 
-const Product = () => {
+const Product = ({ name, image }) => {
   return (
-    <article className="grid items-center bg-blue-600">
-      <h3>Single Product</h3>
+    <article className="flex justify-between items-center w-1/2 mx-auto bg-blue-600 my-5 ">
+      <h3>{name}</h3>
+      <img src={image} alt="user" width={100} height={100} />
     </article>
   );
 };
