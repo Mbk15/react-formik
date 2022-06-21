@@ -20,19 +20,19 @@ import ReactRouterSetup from "./AdvancedReact/React-Router/ReactRouterSetup";
 import App from "./App";
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Booklist />
+    <Booklist />
     <BasicExample />
     <ArrayExample />
     <ObjectExample />
-    <UseStateCounter /> */}
+    <UseStateCounter />
     {/* <UseffectBasic />
     <UseStateCleanup />
-    <UseEffectFetchData /> */}
-    {/* <MultipleReturns />
-    <ShortCircuit />
+    <UseEffectFetchData /> 
+    * <MultipleReturns />
+    <ShortCircuit /> */}
 
-    <ShowHide /> */}
-    {/* 
+    <ShowHide />
+
     <ShowHide />
     <ControlledInputs />
     <UseRefBasics />
@@ -41,7 +41,7 @@ ReactDOM.render(
     <PropsDrilling />
     <ContextApi />
     <CustomHook />
-    <ProductLaunch /> */}
+    <ProductLaunch />
 
     <BrowserRouter>
       <App />
