@@ -16,6 +16,7 @@ import PropsDrilling from "./AdvancedReact/PropsDrilling/PropsDrilling";
 import ContextApi from "./AdvancedReact/UseContext/ContextApi";
 import CustomHook from "./AdvancedReact/CustomHook/CustomHook";
 import ProductLaunch from "./AdvancedReact/Prop-Types/ProductLaunch";
+import UseCallback from "./AdvancedReact/Optimization/UseCallback";
 import ReactRouterSetup from "./AdvancedReact/React-Router/ReactRouterSetup";
 import App from "./App";
 ReactDOM.render(
@@ -42,7 +43,10 @@ ReactDOM.render(
     <ContextApi />
     <CustomHook />
     <ProductLaunch />
-
+    {/* <BrowserRouter>
+<ReactRouterSetup/>
+</BrowserRouter> */}
+    <UseCallback />
     <BrowserRouter>
       <App />
     </BrowserRouter>
