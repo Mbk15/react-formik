@@ -1,6 +1,6 @@
 import React from "react";
 //React-Router
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 //pages
 
@@ -14,11 +14,14 @@ import Navbar from "./Navbar";
 
 const ReactRouterSetup = () => {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/people" element={<People />} />
-    </Routes>
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/people" element={<People />} />
+      </Routes>
+    </>
   );
 };
 
