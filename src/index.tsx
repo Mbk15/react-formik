@@ -19,6 +19,8 @@ import ProductLaunch from "./AdvancedReact/Prop-Types/ProductLaunch";
 import UseCallback from "./AdvancedReact/Optimization/UseCallback";
 import ReduceCounter from "./AdvancedReact/UseReducer/ReduceCounter";
 import App from "./App";
+import Boogie from "./AdvancedReact/useEffect/Boogie";
+
 ReactDOM.render(
   <React.StrictMode>
     <Booklist />
@@ -32,7 +34,7 @@ ReactDOM.render(
     <UseEffectFetchData /> 
     * <MultipleReturns />
     <ShortCircuit /> */}
-
+    <Boogie />
     <ShowHide />
 
     <ShowHide />
